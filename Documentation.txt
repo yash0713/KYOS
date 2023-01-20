@@ -1,0 +1,22 @@
+
+1. The OS is created for x86 architecture.
+
+2. Booting mode used : Legacy
+
+3. Booting disk is assumed to be floppy with sector size of 512 bytes. Hence storage is in 512byte blocks
+
+4. addressing scheme:
+	memory is divided into segments. segments overlap over each other.
+	size of segment is 64k 
+	segments are arrarnged in following way: 
+	segment 1 starts from 0B,
+	segment 2 starts from 16B, 
+	segment 3 starts from 32B......
+#formula: 	real address = segment*16 + offset
+	same address can be calculated in multiple ways ( using different segments)
+
+5. memory referencing:
+segment: [base + index*scale + displacement]
+
+6. All operating systems are divided into 2 parts: Bootloader and Kernel
+ So far we have only written the Bootloader.
